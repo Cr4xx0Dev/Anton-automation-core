@@ -2,7 +2,8 @@
 
 An automated Playwright engine for educational DOM interaction, state tracking, and answer parsing.
 
-> **Disclaimer:** This repository is intended strictly for educational purposes and browser automation research and the Readme.md is ai generated!
+> **Disclaimer:** This repository is intended strictly for educational purposes and browser automation research.
+> **AI:** The Readme.md is ai generated!
 
 ---
 
