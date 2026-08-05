@@ -7,7 +7,7 @@ from playwright.sync_api import sync_playwright
 
 LÖSUNGEN_DATEI = "lösungen.json"
 
-# wert FEHLER_QUOTE = 0  muss erhöht werden ansonsten Detection gefahr!
+# wert [FEHLER_QUOTE = 0]  muss erhöht werden ansonsten Detection gefahr!
 FEHLER_QUOTE = 0  
 LOESEN_KLICK_NACH_FEHLER_CHANCE = 0  
 DENKPAUSE_NACH_FEHLER = (0.0, 0.0)
