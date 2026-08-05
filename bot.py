@@ -7,7 +7,7 @@ from playwright.sync_api import sync_playwright
 
 LÖSUNGEN_DATEI = "lösungen.json"
 
-# Auf 0 gesetzt = Der Bot macht NIE WIEDER absichtliche Fehler!
+# wert FEHLER_QUOTE = 0  muss erhöht werden ansonsten Detection gefahr!
 FEHLER_QUOTE = 0  
 LOESEN_KLICK_NACH_FEHLER_CHANCE = 0  
 DENKPAUSE_NACH_FEHLER = (0.0, 0.0)
@@ -183,7 +183,7 @@ def bot_run(modus="lernen"):
                         
                         time.sleep(wartezeit)
 
-                        # Gibt direkt und kompromisslos die korrekte Antwort ein
+                        # Hier ist einfach nur fur die test das macht alles sofort 
                         tipp_text_sauber(page, echte_antwort)
                         time.sleep(0.3)
                         klicke_weiter_oder_enter(page)
