@@ -12,7 +12,9 @@ An automated Playwright engine for educational DOM interaction, state tracking, 
 - **Parser Engine:** Context-aware regex extraction targeting active input containers and text elements.
 - **Execution Engine:** Playwright Chromium integration with simulated input handling.
 
-### Target DOM Structure
+---
+
+## Target DOM Structure
 
 The engine parses context and input states by targeting dynamic cursor elements with the following markup:
 
@@ -22,6 +24,7 @@ The engine parses context and input states by targeting dynamic cursor elements 
     &nbsp;
   </div>
 </div>
+```
 
 ---
 
@@ -35,13 +38,32 @@ The engine parses context and input states by targeting dynamic cursor elements 
 - Chromium browser binaries
 
 ### Shell Environment Setup
-Create a virtual environment and install the engine package in editable mode:
+Clone the repository, create a virtual environment, and install the engine package in editable mode:
 
 ```fish
-git clone https://github.com/Cr4xx0Dev/Anton-automation-core.git
+git clone [https://github.com/Cr4xx0Dev/Anton-automation-core.git](https://github.com/Cr4xx0Dev/Anton-automation-core.git)
 cd Anton-automation-core/
 python3 -m venv .venv
 source .venv/bin/activate.fish
-pip install playwright
+pip install -e .
 playwright install chromium
-python bot.py
+```
+
+### Execution Flags
+Control runtime behavior via system environment variables (`ANTON_MODE` defaults to `learn`):
+
+```fish
+# Parse and record state answers (Learn Mode)
+ANTON_MODE=learn anton-bot
+
+# Replay recorded state answers (Solve Mode)
+ANTON_MODE=solve anton-bot
+```
+
+</details>
+
+---
+
+## License
+
+Distributed under the [MIT License](LICENSE).
